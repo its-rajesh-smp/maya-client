@@ -5,6 +5,7 @@ import { useSocket } from "../contexts/socket.context";
 import useSocketListener from "../hooks/useSocketListener.hook";
 import useVoiceRecognition from "../hooks/useVoiceRecognition.hook";
 import { getAiContext, setAiContext } from "../utils/aiContext.util";
+import Header from "./Header";
 
 function Interface() {
   const [status, setStatus] = useState("idle");
@@ -55,6 +56,7 @@ function Interface() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white flex flex-col overflow-hidden relative">
+      <Header />
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Orbs */}
