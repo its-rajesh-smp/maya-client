@@ -42,6 +42,11 @@ function Interface() {
     const url = URL.createObjectURL(blob);
     setStatus("speaking");
     const audio = new Audio(url);
+    if (audioRef.current && !audioRef.current.paused) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
     audioRef.current = audio;
     audioRef.current.play();
     audio.onended = () => setStatus("idle");

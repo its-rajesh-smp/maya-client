@@ -11,7 +11,7 @@ export const SocketProvider = ({ children }: { children: React.ReactNode }) => {
   const [socket, setSocket] = useState<Socket | null>(null);
 
   useEffect(() => {
-    const newSocket = io("https://api.maya.itsrajesh.online", {
+    const newSocket = io("http://localhost:3005", {
       transports: ["websocket"],
     });
 

@@ -21,7 +21,12 @@ const useAudioInput = () => {
     },
     additionalAudioConstraints: {
       sampleRate: 16000,
+      backgroundBlur: true,
     },
+    userSpeakingThreshold: 0.55,
+    positiveSpeechThreshold: 0.55,
+    negativeSpeechThreshold: 0.45,
+    minSpeechFrames: 1, // reduced to minimize delay
     startOnLoad: false,
   });
 
